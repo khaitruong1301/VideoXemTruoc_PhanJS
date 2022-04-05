@@ -126,3 +126,27 @@ document.getElementById('btnTinhTienTip').onclick = function(){
 
 }
 
+/*
+    Ví dụ: Tạo ra 1 thẻ trên giao diện = javascript
+    Cú pháp: 
+    Tạo thẻ: var tag = document.createElement('tag_name')
+    Gán thẻ lên giao diện: .appendChild(tag)
+
+*/
+
+document.getElementById('btnTaoThe').onclick = function () {
+    //input: 
+    var noiDung = document.getElementById('noiDung').value;
+    //Cách 1: Tạo ra 1 thẻ và đưa thẻ đó lên giao diện
+    // //Tạo thẻ
+    // var tagDiv = document.createElement('div');
+    // tagDiv.className = 'alert alert-success mt-2';
+    // tagDiv.innerHTML = noiDung;
+    // //Hiển thị thẻ
+    // document.getElementById('content_div').appendChild(tagDiv);
+
+    //cách 2: Để tao ra html
+    var noiDungTheDiv = '<div class="alert alert-danger mt-2">'+noiDung+'</div>';
+
+    document.getElementById('content_div').innerHTML += noiDungTheDiv;
+}
