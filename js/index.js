@@ -1,22 +1,40 @@
-var a = 5;
-var b = 10;
-var c = 5;
-console.log('a = ', a, 'b = ', b, 'c = ', c);
-console.log('Lớn hơn: ', a > b);
-console.log('Bé hơn: ', a < b);
-console.log('Bằng: ', a == b);
-console.log('Khác : ', a != b);
-console.log('Lớn hơn hoặc bằng: ', a >= b);
-console.log('Bé hơn hoặc bằng: ', a <= b);
 
 
-console.log('So sánh == a và c', a >= c);
+// while (true) {
+//     console.log('hello cybersoft');
+//     //Xử lý dừng 
+// }
+/*
+    Các yếu tố xác định bài toán lặp: logic lặp đi lặp lại 1 cách tự động thì đó là bài toán lặp
+    Bước 1: Xác định yếu tố thay đổi (khởi tạo biến bước nhảy)
+    Bước 2: Thiết lặp điều kiện lặp
+    Bước 3: Cài đặt khối xử lý
+    Bước 4: Thay đổi giá trị của biến bước nhảy
 
 
-var d = 7; var e = '7'; // typeof d: number, type of e : string
 
-console.log('d == e', d == e);
-console.log('d === e', d === e);
+*/
 
-console.log('d !== e', d !== e);
-console.log('d != e', d != e);
+document.getElementById('btnInTheDiv').onclick = function (){
+
+    //input: number
+    var input = Number(document.getElementById('iSo').value);
+    //output: string
+    var output = '';
+    //Xử lý
+    //b1
+    var dem = 1;
+    //b2
+    while(dem <= 10)// Còn đúng thì còn làm
+    {
+        //b3
+        var div = '<div class="alert alert-success mt-2">hello cybersoft</div>';
+        // output = output + div;
+        output += div;
+        //b4
+        dem ++;
+    } 
+
+    document.getElementById('ketQua1').innerHTML = output;
+
+}
