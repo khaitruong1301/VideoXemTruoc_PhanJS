@@ -16,19 +16,65 @@
 <body>
 
   <div class="container" style="margin-bottom:500px;">
-   <h3>Ví dụ 1: Cho phép người dùng nhập vào 1 số. In ra số thẻ div hello cybersoft tương tự</h3>
-   <div class="form-group">
-     <p>Nhập vào 1 số</p>
-     <input class="form-control mb-2 w-25" id="iSo" />
-     <button class="btn btn-success" id="btnInTheDiv">In thẻ div</button>
-   </div>
-   <div id="ketQua1">
-     <div class="alert alert-success mt-2">Hello cybersoft</div>
-     <div class="alert alert-success mt-2">Hello cybersoft</div>
-   </div>
-
-
-
+    <h3>Ví dụ 1: Cho phép người dùng nhập vào 1 số. In ra số thẻ div hello cybersoft tương tự</h3>
+    <div class="form-group">
+      <p>Nhập vào 1 số</p>
+      <input class="form-control mb-2 w-25" id="iSo" />
+      <button class="btn btn-success" id="btnInTheDiv">In thẻ div</button>
+    </div>
+    <div id="ketQua1">
+      <div class="alert alert-success mt-2">Hello cybersoft</div>
+      <div class="alert alert-success mt-2">Hello cybersoft</div>
+    </div>
+    <hr />
+    <h3>Ví dụ 2: Cho phép người dùng nhập vào 1 số tính giai thừa số đó</h3>
+    <div class="form-group">
+      <p>Nhập vào số</p>
+      <input class="form-control w-25 mb-2" id="nhapSo" />
+      <button class="btn btn-success" id="btnTinhGiaiThua">
+        Tính giai thừa
+      </button>
+      <div class="alert alert-danger mt-2" id="ketQua2"></div>
+    </div>
+    <hr />
+    <h3>Ví dụ 3: Cho phép người dùng nhập vào 1 số tính tổng từ 1 -> n (Số người dùng nhập)</h3>
+    <div class="alert alert-danger">
+      Ví dụ: Người dùng nhập vào số 7
+      <br />
+      Kết quả = 1 + 2 + 3 + 4 + 5 + 6 + 7;
+    </div>
+    <div class="form-group">
+      <p>Nhập vào số</p>
+      <input class="form-control w-25 mb-2" id="nhapSo_3" />
+      <button class="btn btn-success" id="btnTinhTong">Tính tổng</button>
+    </div>
+    <div class="alert alert-danger" id="ketQua3">
+      28
+    </div>
+    <hr />
+    <h3>Ví dụ 4: Cho phép người dùng nhập vào 1 số tính tổng từ 1 -> n (Số người dùng nhập). Tính tổng các số chẵn</h3>
+    <div class="alert alert-primary">
+      Ví dụ: Người dùng nhập vào số 10
+      <br />
+    </div>
+    <div class="form-group">
+      <p>Nhập vào số</p>
+      <input class="form-control w-25 mb-2" id="nhapSo_4" />
+      <button class="btn btn-primary" id="btnTinhTongSoChan">Tính tổng</button>
+    </div>
+    <div class="alert alert-primary" id="ketQua4">
+      28
+    </div>
+    <hr />
+    <h3>Ví dụ 5: Cho phép người dùng nhập vào 1 số, cho biết số đó có phải là số nguyên tố hay không</h3>
+    <div class="form-group">
+      <p>Nhập vào số</p>
+      <input class="form-control w-25 mb-2" id="nhapSo_5" />
+      <button class="btn btn-warning" id="btnKiemTraSo">Kiểm tra số nguyên tố</button>
+    </div>
+    <div class="alert alert-warning" id="ketQua5">
+      5 là số nguyên tố
+    </div>
   </div>
 
 
