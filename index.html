@@ -11,6 +11,8 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--fa4-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -75,6 +77,65 @@
     <div class="alert alert-warning" id="ketQua5">
       5 là số nguyên tố
     </div>
+    <hr />
+    <h3>Ví dụ 6: Viết chương trình cho phép người dùng nhập vào 1 số in ra số ngôi sao tương ứng</h3>
+    <p class="alert alert-success">
+      Ví dụ: Người dùng nhập 5
+      Kết quả: * * * * *
+    </p>
+    <div class="form-group">
+      <p>Nhập vào 1 số</p>
+      <input class="form-control" id="nhapSo_6" />
+      <br />
+      <button id="btnInSao" class="btn btn-info">In ngôi sao</button>
+    </div>
+    <div class="alert alert-info" id="ketQua6">
+
+    </div>
+    <hr />
+    <h3>Ví dụ 7: Viết chương trình cho phép người dùng nhập vào số hàng và số cột in ra các ngôi sao như sao</h3>
+    <p class="alert alert-warning">
+      Ví dụ: Người dùng nhập vào 3 hàng 5 cột
+      Kết quả: <br />
+      * * * * * <br />
+      * * * * * <br />
+      * * * * * 
+    </p>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-6">
+          <p>Nhập vào số hàng</p>
+          <input class="form-control" id="soHang" />
+        </div>
+        <div class="col-6">
+          <p>Nhập vào số cột</p>
+          <input class="form-control" id="soCot" />
+        </div>
+      </div>
+      <button class="btn btn-warning mt-2" id="btnInSoSao">In kết quả</button>
+     
+      <div class="alert alert-warning mt-2" id="ketQua7">
+
+      </div>
+    </div>
+    <hr />
+    <h3>Ví dụ 8: Cho phép người dùng nhập vào 1 số. In ra các số nguyên tố nhỏ hơn hoặc bằng số người dùng nhập</h3>
+    <p class="alert alert-success">
+      Ví dụ: Người dùng nhập 29 <br />
+      Kết quả: 2, 3, 5, 7, 11, 13, 17, 23, 29
+    </p>
+    <div class="form-group">
+      
+          <p>Nhập vào 1 số</p>
+          <input class="form-control" id="nhapSo_8" />
+       
+      <button class="btn btn-success mt-2" id="btnInSo_8">In kết quả</button>
+     
+      <div class="alert alert-success mt-2" id="ketQua8">
+
+      </div>
+    </div>
+
   </div>
 
 
@@ -90,6 +151,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+
+  <script src="./method/method.js"></script>
   <script src="./js/index.js"></script>
 
 </body>
