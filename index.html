@@ -16,12 +16,62 @@
 <body>
 
   <div class="container" style="margin-bottom:500px;">
-   
+    <h3>Array lý thuyết:</h3>
+    <p id="hoTen" class="badge badge-danger"></p>
+    <div id="content-array">
+    </div>
+    <hr />
+    <h3>DOM: sử dụng tagname(Tên thẻ)</h3>
+    <section>1</section>
+    <section>2</section>
+    <section>3</section>
+    <hr />
+    <h3>DOM : sử dụng className (class của thẻ)</h3>
+    <article class="txt">1</article>
+    <header class="txt">2</header>
+    <footer class="txt">3</footer>
+    <p class="txt">4</p>
+    <hr />
+    <h3>DOM : sử dụng name </h3>
+    <article name="text-demo">1</article>
+    <header name="text-demo">2</header>
+    <footer name="text-demo">3</footer>
+    <p name="text-demo">4</p>
+    <hr />
+    <h3>DOM: queryselector</h3>
+    <div class="demo-selector">
+      <p id="p-text" class="p-text">Hello cybersoft</p>
 
-
-
+      <p id="p1-text" class="p-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo repellendus ut
+        nulla. Quisquam incidunt ea illum, beatae labore nulla molestias laborum optio architecto natus sed, officia
+        nihil. Aliquam, id libero?</p>
+      <button class="btn btn-success" id="btnSubmit">submit</button>
+    </div>
+    <hr />
+    <h3>DOM: querySelectorAll</h3>
+    <form class="card w-50" id="form">
+      <div class="card-header bg-dark text-white">Đăng nhập</div>
+      <div class="card-body">
+        <div class="form-group">
+          <p>Tài khoản</p>
+          <input class="form-control" id="taiKhoan" />
+        </div>
+        <div class="form-group">
+          <p>Mật khẩu</p>
+          <input class="form-control" id="matKhau" type="password" />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success" id="btnDangNhap">Đăng nhập</button>
+        </div>
+      </div>
+    </form>
   </div>
 
+  <style>
+    #form input {
+      color: red !important;
+    }
+  </style>
 
 
   <!-- Optional JavaScript -->
