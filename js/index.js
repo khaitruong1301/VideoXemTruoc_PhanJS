@@ -83,8 +83,8 @@ for (var index = 0; index < arrTagClass.length; index++) {
 }
 //---------------------- Dom qua  name -------------
 var arrTagName = document.getElementsByName('text-demo');
-console.log('arrTagName',arrTagName);
-arrTagName[0].style.color='pink';
+console.log('arrTagName', arrTagName);
+arrTagName[0].style.color = 'pink';
 for (var index = 0; index < arrTagName.length; index++) {
     //Mỗi lần duyệt lấy ra 1 tag
     var tag = arrTagName[index];// 0 1 2 3 
@@ -95,7 +95,7 @@ for (var index = 0; index < arrTagName.length; index++) {
 /*
     .querySelector(selector): Khi dom đến dựa vào querySelector thì kết quả trả về là 1 thẻ đầu tiên khớp với selector đó (Dù có nhiều thẻ có selector giống nhau). Nếu không có thẻ nào khớp selector đó thì kết quả trả về là undefine
 */
-document.querySelector('#btnSubmit').onclick = function (){
+document.querySelector('#btnSubmit').onclick = function () {
     // alert(123);
     var pText1 = document.querySelector('.demo-selector .p-text:nth-of-type(2) ').innerHTML;
 
@@ -108,13 +108,74 @@ document.querySelector('#btnSubmit').onclick = function (){
     .querySelectorAll(selector): Khi dom đến dựa vào querySelectorAll thì kết quả trả về là 1 mảng. Lưu ý: Nếu như chỉ có 1 thẻ khớp với selector thì nó vẫn trả về 1 mảng và mảng đó có 1 phần tử. Nếu không khớp phần tử nào thì kết quả là []
 */
 
-document.querySelector('#btnDangNhap').onclick = function (event){ 
+document.querySelector('#btnDangNhap').onclick = function (event) {
     event.preventDefault(); //Hàm này để chặn sự kiện reload mặc định của browser khi submit
 
     var arrTagInput = document.querySelectorAll(' #form input');
-    console.log('taiKhoan',arrTagInput[0].value);
-    console.log('matKhau',arrTagInput[1].value);
+    console.log('taiKhoan', arrTagInput[0].value);
+    console.log('matKhau', arrTagInput[1].value);
 
     // console.log('abc',arrTagInput)
 
+}
+
+
+/*
+    ------------------------------- Bài tập ------------------------------
+*/
+//input: array 
+var arrNumber = [9, 4, 2, 5, 7, 8, 6, 10, 17, 23, 14, 12];
+
+
+document.querySelector('#btnThemGiaTri').onclick = function () {
+    //input: arrNumber (array), giaTriNhap: ? string
+    var giaTri = Number(document.querySelector('.giaTriNhap').value);
+
+    //output: chuỗi
+    var ketQua = '';
+
+    //Bước 1: Lấy giá trị người dùng thêm vào array
+    arrNumber.push(giaTri);
+
+    //Bước 2: In ra giao diện
+    ketQua = 'Kết quả: [ ' + arrNumber + ' ]';
+    document.querySelector('#ketQua1').innerHTML = ketQua;
+
+
+}
+
+
+
+
+
+//Bài tập 2: Yêu cầu người dùng nhập vào 1 giá trị => Xoá giá trị đó khỏi mảng
+arrNumber = [9, 7, 7, 7, 7, 8, 6, 10, 17, 23, 14, 12];
+document.querySelector('#btnXoaGiaTri').onclick = function () {
+    //input: arrayNumber, giaTriXoa :number
+    var giaTriXoa = Number(document.querySelector('.giaTriNhap2').value);
+    console.log(giaTriXoa);
+    //output: string
+    var ketQua = '';
+
+    var viTriTim = -1;
+    //Duyệt mảng
+    for (var i = arrNumber.length - 1; i >= 0; i--) {
+        if(arrNumber[i] === giaTriXoa) {
+            //Nếu giá trị trong mảng = giá trị người dùng nhập thì gán viTriTim = index tại chổ đó
+            viTriTim = i;
+            arrNumber.splice(viTriTim,1);
+
+            // break;
+        }
+    }
+
+    //Ra khỏi vòng lặp thì kiểm tra viTriTim có khác -1 hay không
+    if(viTriTim != -1) {
+        // arrNumber.splice(viTriTim,1);
+        ketQua = 'Mảng sau khi xoá : ['+ arrNumber +' ]';
+    }else {
+        ketQua = 'Không tìm thấy giá trị :' + giaTriXoa;
+    }
+    //In kết quả ra giao diện
+    document.querySelector('#ketQua2').innerHTML = ketQua;
 }
